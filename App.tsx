@@ -27,12 +27,6 @@ export default function App() {
     setText(text);
   };
 
-  const onBlur = () => {
-    if (text.trim().length === 0) {
-      setWarning(true);
-    }
-  };
-
   const addTodo = () => {
     if (text.trim().length === 0) {
       return;
@@ -43,7 +37,7 @@ export default function App() {
       completed: false,
     };
     setTodos((prevTodos) => [...prevTodos, newTodo]);
-    setText("");
+    // setText("");
     ref.current?.focus();
   };
 
